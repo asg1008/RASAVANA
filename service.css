@@ -164,7 +164,6 @@ h2 {
     margin-top: 40px;
     text-align: center;
 }
-
 p {
     color: rgb(0, 0, 0);
     font: 2em cursive;
@@ -174,8 +173,26 @@ p {
     margin-top: 40px;
     text-align: justify;
 }
-
-
+.flex-container{
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.flexbox{
+    width: 500px;
+    height: auto;
+    background-color: rgb(113, 216, 184);
+    font-weight: 600;
+    font-size: x-large;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+}
 
 /*hamburger  menu*/
 @media (max-width: 768px) {
@@ -220,5 +237,19 @@ p {
     .nav-list.show {
         display: flex;
         /* Show dropdown menu when active */
+    }
+}
+/*responsive*/
+@media(max-width: 780px) {
+    .navbar {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items */
+    }
+
+    .header li {
+        margin: 10px 0;
+        /* Space between items */
     }
 }
