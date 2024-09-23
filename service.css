@@ -185,7 +185,8 @@ p {
 .flexbox{
     width: 500px;
     height: auto;
-    background-color: rgb(113, 216, 184);
+    background-color: rgb(146, 230, 255);
+    box-shadow: 0 0 1rem rgb(3, 79, 123);
     font-weight: 600;
     font-size: x-large;
     text-align: center;
@@ -193,7 +194,26 @@ p {
     border-radius: 10px;
     margin: 10px;
 }
-
+.flexbox p{
+    align-items: center;
+    justify-content: center;
+    color: #1f1d1d;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.heading i{
+    font-size: 36px;
+    color: rgb(1, 50, 18);
+    margin-right: 10px;
+}
 /*hamburger  menu*/
 @media (max-width: 768px) {
     .nav-list {
