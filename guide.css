@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --light-green: #b9efc0;
+    --blue-green: #9eefd8;
+    --green: #4ba26e;
+    --black: #1f1d1d;
+    --dark-green: #094730;
+    --grey: #a3a2a4;
+    --white: #ffffff;
+    --light-grey: #dbdbdb;
+    --sky-blue: #aedef3;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f6f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    border: none;
+    font-family: 'Tilt Neon';
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.header {
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--light-green);
+    height: 80px;
+    position: fixed;
+    padding: 1rem 9%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo {
+    height: auto;
+    width: 90px;
+    position: fixed;
+    left: 30px;
+    top: -5px;
+    margin-right: 25px;
+
+}
+
+.navbar li {
+    font-size: 28px;
+    color: #1f1d1d;
+    font-weight: bold;
+    margin-left: 65px;
+    list-style: none;
+    display: inline-block;
+}
+.nav-list {
+    display: flex;
+    /* Horizontal layout by default */
+    align-items: center;
+}
+
+.nav-list li {
+    font-size: 28px;
+    color: #1f1d1d;
+    font-weight: bold;
+    margin-left: 65px;
+    list-style: none;
+}
+
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: auto;
+    /* Adjust size as needed */
+}
+.header li {
+    list-style: none;
+    display: inline-block;
+}
+
+.header li a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+button {
+    background-color: var(--light-grey);
+    margin-left: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button a {
+    color: #1f1d1d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(94, 25, 94);
+}
+
+
+.native_plants img {
+    margin-top: 150px;
+    margin-left: 70px;
+    width: 90%;
+    height: 60vh;
+}
+
+/*wrapper classes*/
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 100px auto;
+    width: 70%;
+}
+h1{
+    color: rgb(2, 48, 154);
+        font: 2em cursive;
+        font-style: bold;
+        font-weight: 600;
+        margin-top: 40px;
+        text-align: center;
+}
+.text-box{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 0 40px 0 70px;
+}
+.text-box p{
+    color: black;
+        font-size: 22px;
+        margin-top: 20px;
+        padding: 0 40px 0 70px;
+        font-weight: 600;
+}
+.text-box li{
+    font-weight: 600;
+        font-size: 23px;
+        color: rgb(14, 84, 14);
+        margin-top: 20px;
+        padding: 0 0px 0 10px;
+}
+.native_img{
+    width: 500px;
+    float: left;
+}
+.water_img{
+    width: 400px;
+    float: right;
+}
+.bug_spray{
+    width: 500px;
+    height: auto;
+    float: left;
+    margin-right: 70px;
+}
+.mulch_img{
+    width: 500px;
+    float: right;
+    height: auto;
+}
+.pest_img{
+    width: 500px;
+    float: right;
+}
+.poll_img{
+    width: 500px;
+    float: left;
+}
+
+/*hamburger  menu*/
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide the nav list by default on small screens */
+        width: 100%; /* Full width for dropdown */
+        position: absolute;
+        top: 80px; /* Below the header */
+        left: 0;
+        background-color: var(--light-green);
+        flex-direction: column; /* Stack items vertically */
+        z-index: 99; 
+    }
+
+    .nav-list {
+        display: none;
+        /* Hide the nav list by default on small screens */
+        width: 100%;
+        /* Full width for dropdown */
+    }
+
+    .nav-list li {
+        margin: 10px 0;/* Vertical space between items */
+        text-align: center;/* Center text */
+    }
+
+    .hamburger {
+       display: block; /* Show the hamburger icon */
+        position: absolute;
+        top: 10px; /* Adjust as needed */
+        right: 20px; 
+    }
+
+    .nav-list.show {
+        display: flex;
+        /* Show dropdown menu when active */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 780px) {
+    .header {
+        height: 80px;
+        padding: 0.5rem 5%;
+    }
+
+    .navbar li {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .header li a {
+        font-size: 16px;
+        margin-right: 15px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .text-box {
+        padding: 0 15px;
+    }
+
+    .text-box p,
+    .text-box li {
+        font-size: 15px;
+    }
+
+    .native_img,
+    .water_img,
+    .bug_spray,
+    .mulch_img,
+    .pest_img,
+    .poll_img {
+        width: 90%;
+        margin: 0 0 0 10px ;
+    }
+
+}
+@media (max-width: 768px) {
+    .native_plants img {
+        width: 100%;
+        /* Full width on smaller screens */
+        height: 40vh;
+        /* Remove max-width */
+    }
+    /* Adjust margins for better spacing */
+    .native_plants img {
+        margin: 40px 0;
+        /* Vertical margin only */
+    }
+}
+
+@media(max-width: 780px){
+    .navbar {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items */
+    }
+
+    .header li {
+        margin: 10px 0;
+        /* Space between items */
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .navbar li {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+
+    .header li a {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .text-box p,
+    .text-box li {
+        font-size: 16px;
+    }
+}
